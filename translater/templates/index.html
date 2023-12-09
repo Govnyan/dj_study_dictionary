@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>{% block title %}My dictionary{% endblock %}</title>
+
+    {% load static %}
+
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-scholar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+
+<body>
+
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <a href="/" class="logo">
+                        <h1>Maksimilianus inc.</h1>
+                    </a>
+                      <div id="sidebar">
+                        {% block sidebar %}
+                        <ul class="nav">
+                          <li class="scroll-to-section"><a href="/words_list/" class="active">Словарь</a></li>
+                          <li class="scroll-to-section"><a href="/add_word/">Добавить слово</a></li>
+                        </ul>   
+                        {% endblock %}
+                      </div>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <div class="main-banner" id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="owl-carousel owl-testimonials">
+            <div class="item">
+              <p>“Спасибо вам за место на небе”</p>
+              <div class="author">
+                <img src="{% static 'assets/images/testimonial-author.jpg' %}" alt="">
+                <span class="category">Мастер во всем</span>
+                <h4>Облачный Хранилищ</h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>“Ну когда-то я был там, где я был?”</p>
+              <div class="author">
+                <img src="{% static 'assets/images/testimonial-author.jpg' %}" alt="">
+                <span class="category">Эксперт по древностям</span>
+                <h4>Жирафик</h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>“Щииикааарнооо”</p>
+              <div class="author">
+                <img src="{% static 'assets/images/testimonial-author.jpg' %}" alt="">
+                <span class="category">Аниматор</span>
+                <h4>Кошка</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>Где был? Почему не ел?</h6>
+            <h2>Что говорят о нас</h2>
+            <p>Не плохой день для портфолио, здесь можно еще что-то написать, но я не знаю что и поэтому буду просто писать и писать, пока не закончится место. О каком месте идет речь? Под солнцем или на космической станции под названием "Спасибо вам за заботу"...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2077 Cyberpunk Organization. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/counter.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+  </body>
+</html>
+
+

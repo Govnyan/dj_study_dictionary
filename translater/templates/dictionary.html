@@ -1,0 +1,39 @@
+{% extends 'index.html'%}
+
+{% block title %}Список {% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-1">
+        <div class="accordion" id="content1">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span>  Словарь  </span></button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+              <div class="accordion-body">
+                <span class="category"></span>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Origin</td>
+                      <td>Translate</td>
+                    </tr>
+                    
+                      {% for w1,w2 in list.items %}
+                        <tr>
+                          <td>{{ w1 }}</td>
+                          <td>{{ w2 }}</td>
+                        </tr>
+                      {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
